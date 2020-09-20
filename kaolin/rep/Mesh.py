@@ -714,7 +714,7 @@ class Mesh():
 
         # VERTEX2FACES
         vertex_ordered, order_vertex = torch.sort(faces.view(-1))
-        face_ids_in_vertex_order = order_vertex / facesize
+        face_ids_in_vertex_order = order_vertex // facesize
         # indices of first occurences of each id
         idx_first = torch.where(
             torch.nn.functional.pad(vertex_ordered[1:] != vertex_ordered[:-1], (1,0), value=1))[0]
