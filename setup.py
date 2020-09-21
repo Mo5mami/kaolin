@@ -215,6 +215,7 @@ def get_requirements():
         'trimesh>=3.0',
         'scipy==1.4.1',
         'tqdm==4.32.1',
+        'pptk'>=0.1.0
         'pillow<7.0.0',
     ]
 
